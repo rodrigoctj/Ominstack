@@ -1,0 +1,82 @@
+## Instalando o package manager - Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+---------------- BACKEND -------------
+
+## Instalando o node
+brew install node@10
+echo 'export PATH="/usr/local/opt/node@10/bin:$PATH"' >> ~/.bash_profile
+export LDFLAGS="-L/usr/local/opt/node@10/lib"
+export CPPFLAGS="-I/usr/local/opt/node@10/include"
+
+## Instalando o YARN (gerenciador de pacotes)
+brew install yarn --ignore-dependencies (para eleminar a instalação do node)
+
+## Criando o projeto
+yarn init -y 
+code . --> abre o vs com o projeto da pasta local
+yarn add express --> no termina do vs
+
+## rodando o node
+node src/server.js
+
+## configurando o node para hot deploy
+yarn add nodemon -D --> -D diz que a dependecia só será utilizado no ambiente de DEV.
+yarn dev --> inicia servidor
+
+## instalando o insomnia (tipo postman)
+brew cask install insomnia
+
+## instalando ferramenta para mongodb
+yarn add mongoose
+
+## instaland extensao para trabalhar com request do tipo multipart form(para envio de imagens). 
+yarn add multer
+
+## instalando cors --> gerencia o acesso a api
+yarn add cors
+
+## lib para real-time
+yarn add socket-io
+
+---------------- FRONTEND -------------
+
+## criando projeto já com babel (compatibiliza o código js de acordo com a versão e tipo dos navegadores)
+yarn create react-app frontend
+
+componente é uma função que retorna um hmtl
+
+## iniciando
+yarn start
+
+## instalando o axios (ferramenta para realizar chamados a API)
+yarn add axios
+
+## instalando o router para gerenciar navegacao de paginas
+yarn add react-router-dom 
+
+1:12:07
+
+## lib para real-time
+yarn add socket.io-client
+
+## Express é um microframework dentro do node
+
+---------------- MOBILE -------------
+## instalando o expo
+npm install -g expo-cli
+
+## criar projeto
+expo init mobile
+
+## sobre aplicacao
+yarn start
+
+yarn add react-navigation
+
+expo install react-native-gesture-handler react-native-reanimated
+
+yarn add axios
+
+
+1:00:47
